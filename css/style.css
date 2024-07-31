@@ -1,0 +1,457 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --red: indianred;
+    --black: rgb(29, 29, 29);
+    --light:rgb(29, 29, 29);;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    top: 60px;
+}
+
+.nav1 {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 2px 0px 3px gray;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.nav1 .left {
+    flex-basis: 50%;
+    letter-spacing: 2px;
+}
+
+.nav1 a {
+    margin: 0px 5px;
+    text-decoration: none;
+    color: var(--red);
+    font-weight: bold;
+}
+
+.nav1 .right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav1 i {
+    background-color: var(--red);
+    color: white;
+    font-size: 20px;
+    margin: 0px 15px;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.nav1 .right i:hover {
+    transform: rotate(360deg);
+}
+
+/* nav2 styles */
+.nav2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures items stack on smaller screens */
+}
+
+.nav2 .nav2-left,
+.nav2 .nav2-center,
+.nav2 .nav2-right {
+    flex: 1;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.nav2 .nav2-left i,
+.nav2 .nav2-right i {
+    color: var(--red);
+}
+
+.nav2 .nav2-center h3 {
+    color: var(--red);
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.nav2 .nav2-center h3 span {
+    color: var(--light);
+}
+
+.nav2 .nav2-center p {
+    margin-top: 5px;
+    font-size: 15px;
+    color: gray;
+}
+
+/* nav3 styles */
+.nav3 {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background-color: var(--light);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.nav3 ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav3 ul li {
+    display: inline-block;
+    width: 150px;
+    position: relative;
+}
+
+.nav3 ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.nav3 ul li a:hover {
+    color: var(--red);
+}
+
+.nav3 ul li i {
+    color: var(--red);
+    margin: 0px 5px;
+}
+
+.nav3 ul ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: none;
+    background-color: var(--light);
+}
+
+.nav3 ul li:hover > ul {
+    display: block;
+}
+
+.featcher {
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(255, 255, 255, 0.2)), url(../assets/g1.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+.featcher-text {
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%); /* Centered horizontally and vertically */
+    text-align: center;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 2rem;
+    padding: 10px;
+    font-family: "Akaya Kanadaka", system-ui;
+}
+
+.featcher-text button {
+    border: none;
+    outline: none;
+    background-color: var(--red);
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0px;
+}
+
+.latest {
+    margin: 50px 0px;
+    padding: 50px 20px; /* Adjusted padding for smaller screens */
+}
+
+.product-intro {
+    text-align: center;
+    margin-bottom: 30px; /* Added margin for spacing */
+}
+
+.product-intro h1 {
+    font-size: 2rem;
+    color: var(--red);
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+}
+
+.product-intro h1 span {
+    color: var(--black);
+}
+
+.product-intro p {
+    color: gray;
+    margin: 15px 0px;
+}
+
+.card-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.card {
+    flex-basis: calc(25% - 20px); /* Adjusted card width for responsiveness */
+    padding: 0.8rem;
+    position: relative;
+    margin-bottom: 20px; /* Added margin for spacing */
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.card i {
+    color: goldenrod;
+    margin: 10px 0px;
+}
+
+.card button {
+    margin-top: 10px;
+    color: white;
+    background-color: var(--black);
+    outline: none;
+    border: none;
+    padding: 5px 15px;
+}
+
+.card:hover img,
+.card:hover h1 {
+    width: 80%;
+    color: var(--red);
+}
+
+.card::before {
+    content: "20% off";
+    width: 25%;
+    height: 25px;
+    line-height: 25px;
+    color: white;
+    position: absolute;
+    padding: 0px 4px;
+    top: 0;
+    left: 0;
+    background-color: var(--red);
+    transform: rotate(-20deg);
+}
+
+.trends {
+    padding: 50px 20px; /* Adjusted padding for smaller screens */
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+.trends .swiper {
+    width: 100%;
+    padding: 20px; /* Adjusted padding for spacing */
+}
+
+.trends .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px; /* Adjusted slide width for smaller screens */
+    height: 300px; /* Adjusted slide height for smaller screens */
+}
+
+.trends .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: var(--black);
+    color: white;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+footer div {
+    flex: 1 1 30%; /* Allows divs to take 30% of the width, adjusting for spacing */
+    margin: 10px; /* Margin to ensure spacing between divs */
+    box-sizing: border-box;
+}
+
+footer h3 {
+    letter-spacing: 0.5rem;
+}
+
+footer h3 span {
+    color: var(--red);
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer i {
+    margin: 0px 5px;
+    color: var(--red);
+}
+
+/* Ensure that footer divs stack vertically on smaller screens */
+@media only screen and (max-width: 768px) {
+    footer div {
+        flex-basis: 100%; /* Full width for smaller screens */
+        margin: 10px 0; /* Margin for spacing on small screens */
+    }
+}
+
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1024px) {
+    .nav1 .left,
+    .nav1 .right {
+        flex-basis: 100%; /* Full width for smaller screens */
+        text-align: center; /* Center align text */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav2 .nav2-left,
+    .nav2 .nav2-center,
+    .nav2 .nav2-right {
+        flex-basis: 100%; /* Full width for smaller screens */
+        margin: 10px 0; /* Added margin for spacing */
+    }
+
+    .nav3 ul li {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .featcher-text {
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%); /* Centered horizontally and vertically */
+        max-width: 90%; /* Adjusted max-width for smaller screens */
+    }
+
+    .card {
+        flex-basis: calc(50% - 20px); /* Adjusted card width for smaller screens */
+    }
+
+    .trends .swiper-slide {
+        width: 250px; /* Adjusted slide width for smaller screens */
+        height: 250px; /* Adjusted slide height for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .featcher-text h2 {
+        font-size: 1.5rem; /* Reduced font size for smaller screens */
+    }
+
+    .latest {
+        padding: 30px 10px; /* Adjusted padding for smaller screens */
+    }
+
+    .card {
+        flex-basis: 100%; /* Full width for smaller screens */
+    }
+
+    .trends .swiper-slide {
+        width: 100%; /* Full width for smaller screens */
+        height: 200px; /* Adjusted slide height for smaller screens */
+    }
+}
+
+/* For medium screens (tablets and up) */
+@media only screen and (max-width: 1024px) {
+    .nav1 .left,
+    .nav1 .right {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    
+    .nav3 ul li {
+        width: auto; /* Adjusts width to fit content */
+    }
+}
+
+/* For small screens (phones in portrait mode) */
+@media only screen and (max-width: 768px) {
+    .nav2 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav2 .nav2-left,
+    .nav2 .nav2-center,
+    .nav2 .nav2-right {
+        margin: 10px 0;
+        flex-basis: 100%;
+    }
+    
+    .nav3 ul li {
+        width: auto;
+    }
+
+    .nav3 ul li a {
+        padding: 0 5px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* For very small screens (phones in landscape mode and very small devices) */
+@media only screen and (max-width: 480px) {
+    .nav1 a {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    
+    .nav3 {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 10px 0; /* Add padding for better spacing */
+    }
+    
+    .nav3 ul li {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .nav3 ul li a {
+        padding: 10px 0; /* Adjust padding for better touch targets */
+    }
+}
